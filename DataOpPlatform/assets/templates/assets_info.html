@@ -39,8 +39,8 @@
                     <td>{{a.status}}</td>
                     <td>{{a.raid}}</td>
                     <td>
-                        <a href="#">修改</a>
-                        <a href="#">删除</a>
+                        <a href="{% url "assets.modify_assets" assets_id=a.id %}">修改</a>
+                        <a href="{% url "assets.delete_assets" assets_id=a.id %}">删除</a>
                     </td>
                 </tr>
             {% endfor %}
