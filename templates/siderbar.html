@@ -1,0 +1,80 @@
+<div class="sidebar" id="sidebar" style="margin-left: -15px;margin-top: 50px">
+    <script type="text/javascript">
+        try{ace.settings.check('sidebar' , 'fixed')}catch(e){}
+    </script>
+    <div class="sidebar-shortcuts" id="sidebar-shortcuts">
+
+    <div class="sidebar-shortcuts-mini" id="sidebar-shortcuts-mini">
+        <span class="btn btn-success"></span>
+
+        <span class="btn btn-info"></span>
+
+        <span class="btn btn-warning"></span>
+
+        <span class="btn btn-danger"></span>
+    </div>
+    </div>
+    <!-- #sidebar-shortcuts -->
+
+    <ul class="nav nav-list">
+        <li class="active">
+            <a href="{% url "index" %}">
+                <i class="icon-home"></i>
+                <span class="menu-text"> 菜单栏 </span>
+            </a>
+        </li>
+
+        <li>
+            <a href="#" class="dropdown-toggle">
+                <i class="icon-edit"></i>
+                <span class="menu-text">ASSETS</span>
+                <b class="arrow icon-angle-down"></b>
+            </a>
+            <ul class="submenu">
+                <li>
+                    <a href="{% url "assets.assets_info" %}">
+                        <i class="icon-leaf"></i>
+                        ASSETS信息管理
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="icon-leaf"></i>
+                        SUBNET
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="icon-leaf"></i>
+                        DNS
+                    </a>
+                </li>
+            </ul>
+        </li>
+
+        <li>
+            <a href="#" class="dropdown-toggle">
+                <i class="icon-edit"></i>
+                <span class="menu-text"> DNS管理 </span>
+                <b class="arrow icon-angle-down"></b>
+            </a>
+            <ul class="submenu">
+                <li>
+                    <a href="#">
+                        <i class="icon-leaf"></i>
+                        DNS
+                    </a>
+                </li>
+            </ul>
+        </li>
+
+        <ul>
+
+    <div class="sidebar-collapse" id="sidebar-collapse">
+        <i class="icon-double-angle-left" data-icon1="icon-double-angle-left" data-icon2="icon-double-angle-right"></i>
+    </div>
+
+    <script type="text/javascript">
+        try{ace.settings.check('sidebar' , 'collapsed')}catch(e){}
+    </script>
+</div>

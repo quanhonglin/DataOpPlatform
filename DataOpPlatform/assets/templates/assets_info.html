@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% load staticfiles bootstrap3%}
+
+{% block page-title %}
+    资产信息管理
+{% endblock page-title %}
+{% block sub-nav %}
+    <a href="{% url "assets.insert_assets_record" %}" style="font-size: large">新增</a>
+{% endblock sub-nav %}
+{% block content %}
+    <table id="DataTable" class="table table-striped table-bordered table-hover" style="margin-right: 100px">
+        <thead class="active">
+            <tr >
+                <th>序号</th>
+                <th>机柜</th>
+                <th>IP</th>
+                <th>机器名</th>
+                <th>描述</th>
+                <th>硬盘</th>
+                <th>SN</th>
+                <th>备注</th>
+                <th>状态</th>
+                <th>Raid</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for a in assets_infos %}
+                <tr>
+                    <td>{{a.number}}</td>
+                    <td>{{a.cabinet}}</td>
+                    <td>{{a.ip}}</td>
+                    <td>{{a.server_name}}</td>
+                    <td>{{a.description}}</td>
+                    <td>{{a.hard}}</td>
+                    <td>{{a.SN}}</td>
+                    <td>{{a.remark}}</td>
+                    <td>{{a.status}}</td>
+                    <td>{{a.raid}}</td>
+                    <td>
+                        <a href="#">修改</a>
+                        <a href="#">删除</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock content %}
