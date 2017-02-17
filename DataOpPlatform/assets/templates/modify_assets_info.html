@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% load staticfiles bootstrap3%}
+
+{% block page-title %}
+    资产信息管理
+{% endblock page-title %}
+{% block sub-nav %}
+    <a href="{% url "assets.insert_assets_record" %}" style="font-size: large">新增</a>
+{% endblock sub-nav %}
+{% block content %}
+    {% include "upright_form.html" %}
+{% endblock content %}
